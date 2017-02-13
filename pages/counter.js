@@ -8,7 +8,7 @@ export default () =>
     <div>
       <h1>Hello Counter!</h1>
       <Counter />
-      <Link href="/">Home</Link>
-      <Link href="/todoapp">Todoapp</Link>
+      <Link href="/"><a>Home</a></Link>
+      <Link href="/todoapp"><a>Todoapp</a></Link>
     </div>
   </Provider>

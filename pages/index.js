@@ -5,5 +5,6 @@ export default () =>
   <div>
     <h1>Hello World!</h1>
     <p>{ hello }</p>
-    <Link href="/counter">Counter</Link>
+    <Link href="/counter"><a>Counter</a></Link>
+    <Link href="/todoapp"><a>Todoapp</a></Link>
   </div>
