@@ -55,10 +55,51 @@ For all other files inside the module, they should all have **default exports** 
 
 ## Container-Component
 
-Inside each module, if it holds React components, there should be two folders: `components` and `containers`.
+Inside each React-based module, there should be two folders: `components` and `containers`.
 
-`components` is where all the presentational or "dumb" components will live. These components must be functional stateless components.
+`components` is where all the presentational or "dumb" components will live. These components must be **functional stateless components**.
 
 `containers` is where all the "smart" components will live. These are components that may contain state, and also will be tasked with `connect()`-ing to the redux store so that we can provide the appropriate props and actions to a consuming component.
 
 If these containers become too complicated, split the file into two containers instead, with one in charge of connecting to the redux store, and the other to handle local component state.
+
+### Number of files
+
+Ideally, there shouldn't be more than five files inside each of the `components` and `containers` folders.
+
+If you find that you require more files to implement your feature, try to split out the feature into another module with a namespaced prefix.
+
+For example, if your `counter` module gets complicated enough to require data-fetching and more fancy presentational components, consider splitting your one `counter` module into several modules like this:
+
+```
+modules/counter-core/
+modules/counter-data/
+modules/counter-components/
+```
+
+### Example
+
+#### `containers/Counter.js`:
+
+```js
+import { connect } from 'react-redux'
+import Component from '../components/Counter'
+
+const mapDispatchToProps = (dispatch) => ({
+  increment: () => dispatch({ type: 'INCREMENT' }),
+  decrement: () => dispatch({ type: 'DECREMENT' }),
+})
+
+export default connect(state => state, mapDispatchToProps)(Component)
+```
+
+#### `components/Counter.js`:
+
+```js
+export default ({ count = 0, increment, decrement }) =>
+  <div>
+    <h1>{ count }</h1>
+    <button onClick={ increment }>Increment</button>
+    <button onClick={ decrement }>Decrement</button>
+  </div>
+```
