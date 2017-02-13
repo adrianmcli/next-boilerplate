@@ -29,10 +29,10 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
 
 There are currently four modules in this boilerplate example:
 
-* `core` — This module holds a simple string variable in order to demonstrate importing from a module. See `index.js` under the `pages` directory.
-* `redux-config` — This module holds the internal logic for setting up Redux, it is also where all the reducers and initial app states are combined. See the `counter.js` and `todoapp.js` pages for an example of a Redux-enabled "page".
-* `counter` — This module demonstrates an increment/decrement counter that interfaces with Redux with its own actions, reducers, and initial state.
-* `todoapp` — This module demonstrates a simple todo app with all of the things that the `counter` module demonstrates, but with more complex containers and components.
+* `core` — Holds a simple string variable in order to demonstrate importing from a module.
+* `redux-config` — Configures Redux; It is also where all the reducers and initial app states are combined.
+* `counter` — Implements a Redux-based increment/decrement counter with its own actions, reducers, and initial state.
+* `todoapp` — Implements a simple Redux-based todo app similar to the `counter` module, but with more complex containers and components.
 
 # Conventions
 
