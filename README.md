@@ -5,9 +5,11 @@ A modern universal boilerplate for React applications using Next.js.
 
 This boilerplate is in heavy development. The next step will be to refactor some of the Redux logic into its own module. Please keep that in mind as you evaluate this repository and read the following paragraphs.
 
+### Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<!-- https://github.com/thlorenz/doctoc -->
 
 - [Conventions](#conventions)
   - [Feature-based folder structure](#feature-based-folder-structure)
