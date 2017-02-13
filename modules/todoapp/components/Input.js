@@ -1,3 +1,5 @@
+/* global React */
+
 export default class Component extends React.Component {
   state = { inputText: '' }
 
