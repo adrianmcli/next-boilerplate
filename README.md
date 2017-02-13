@@ -12,11 +12,11 @@ This boilerplate is in heavy development. The next step will be to refactor some
 <!-- https://github.com/thlorenz/doctoc -->
 
 - [Conventions](#conventions)
-  - [Feature-based folder structure](#feature-based-folder-structure)
+  - [Feature-based modules](#feature-based-modules)
     - [Actions and Reducers](#actions-and-reducers)
-    - [Importing conventions](#importing-conventions)
-    - [Exporting conventions](#exporting-conventions)
-  - [Container-Component folder structure](#container-component-folder-structure)
+    - [Importing](#importing)
+    - [Exporting](#exporting)
+  - [Container-Component model](#container-component-model)
     - [Number of files](#number-of-files)
     - [Example](#example)
       - [`containers/Counter.js`](#containerscounterjs)
@@ -28,7 +28,7 @@ This boilerplate is in heavy development. The next step will be to refactor some
 
 As per Next.js convention, everything starts at the `pages` directory. Beyond this (and other default conventions), we have decided to add some additional conventions to improve the developer experience.
 
-## Feature-based folder structure
+## Feature-based modules
 
 A module is just a folder underneath the `modules` directory.
 
@@ -44,7 +44,7 @@ All Redux-related items such as actions and reducers should reside in their own 
 
 The idea is to ensure that **each module fully contains everything required for the implementation of its feature**. That way, when you need to go change something, you'll know that everything you need will be inside that module.
 
-### Importing conventions
+### Importing
 
 Importing from a feature-based module is simple. We use a Babel plugin (`babel-plugin-root-import`) so that we can minimize our usage of relative paths.
 
@@ -72,13 +72,13 @@ import { Counter, reducer } from '../modules/counter'
 
 You should never be using relative imports unless you are only working with the internals of a module.
 
-### Exporting conventions
+### Exporting
 
 Inside each module, the `index.js` file will have **named exports** for anything that the module chooses to expose to the rest of the app.
 
 For all other files inside the module, they should all have **default exports** so that each file's responsibility is made clear by what it is exporting.
 
-## Container-Component folder structure
+## Container-Component model
 
 Inside each React-based module, there should be two folders: `components` and `containers`.
 
