@@ -1,5 +1,9 @@
+import * as counterActions from './actions'
+import counterReducer from './reducer'
 import Container from './containers/Counter'
-import CounterReducer from './reducer'
+import state from './initialState'
 
+export const actions = counterActions
+export const reducer = counterReducer
 export const Counter = Container
-export const reducer = CounterReducer
+export const initialState = state

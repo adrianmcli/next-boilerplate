@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { Provider } from 'react-redux'
-import { Counter } from '~/counter'
+import { Todoapp } from '~/todoapp'
 import { getStore } from '~/redux-config'
 
 export default () =>
   <Provider store={getStore()}>
     <div>
-      <h1>Hello Counter!</h1>
-      <Counter />
+      <h1>Todo App</h1>
+      <Todoapp />
       <Link href="/"><a>Home</a></Link>
-      <Link href="/todoapp"><a>Todoapp</a></Link>
+      <Link href="/counter"><a>Counter</a></Link>
     </div>
   </Provider>

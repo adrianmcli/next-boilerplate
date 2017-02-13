@@ -3,7 +3,7 @@ A modern universal boilerplate for React applications using Next.js.
 
 ### Warning
 
-This boilerplate is in heavy development. The next step will be to refactor some of the Redux logic into its own module. Please keep that in mind as you evaluate this repository and read the following paragraphs.
+This boilerplate is in heavy development. Please keep this in mind as you evaluate this repository and read the following paragraphs.
 
 ### Table of Contents
 
@@ -11,6 +11,7 @@ This boilerplate is in heavy development. The next step will be to refactor some
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- https://github.com/thlorenz/doctoc -->
 
+- [Modules](#modules)
 - [Conventions](#conventions)
   - [Feature-based modules](#feature-based-modules)
     - [Actions and Reducers](#actions-and-reducers)
@@ -23,6 +24,15 @@ This boilerplate is in heavy development. The next step will be to refactor some
       - [`components/Counter.js`](#componentscounterjs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Modules
+
+There are currently four modules in this boilerplate example:
+
+* `core` — This module holds a simple string variable in order to demonstrate importing from a module. See `index.js` under the `pages` directory.
+* `redux-config` — This module holds the internal logic for setting up Redux, it is also where all the reducers and initial app states are combined. See the `counter.js` and `todoapp.js` pages for an example of a Redux-enabled "page".
+* `counter` — This module demonstrates an increment/decrement counter that interfaces with Redux with its own actions, reducers, and initial state.
+* `todoapp` — This module demonstrates a simple todo app with all of the things that the `counter` module demonstrates, but with more complex containers and components.
 
 # Conventions
 
@@ -76,7 +86,7 @@ You should never be using relative imports unless you are only working with the 
 
 Inside each module, the `index.js` file will have **named exports** for anything that the module chooses to expose to the rest of the app.
 
-For all other files inside the module, they should all have **default exports** so that each file's responsibility is made clear by what it is exporting.
+For all other files inside the module, they should all be **default exports** so that each file's responsibility is made clear by what it is exporting. Note that this is not a hard rule, as Redux actions can be considered an exception to this rule. The reasoning for this exception is due to the fact that actions usually are not large enough to warrant their own file. As a result, we group them all into one `actions.js` file and use named exports to expose them.
 
 ## Container-Component model
 
