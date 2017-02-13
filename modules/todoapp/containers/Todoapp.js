@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { increment, decrement } from '../actions'
-import Component from '../components/Counter'
+import Component from '../components/Todoapp'
 
 const mapDispatchToProps = (dispatch) => ({
   increment: () => dispatch(increment()),

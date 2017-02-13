@@ -1,3 +1,3 @@
 export default {
-  todoapp: { count: -6 },
+  todoapp: { todos: [1, 2, 3] },
 }
