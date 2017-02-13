@@ -1,8 +1,9 @@
-// TODO - this info should really reside in their own respective
-// feature modules, refactor this in the future
-
 // this initial state is used for server-side rendering as well
-export default {
-  counter: { count: 3 },
-  todoapp: { count: -3 },
-}
+import { initialState as counter } from '~/counter'
+import { initialState as todoapp } from '~/todoapp'
+
+// merge all initial states and export
+export default Object.assign({},
+  counter,
+  todoapp
+)
