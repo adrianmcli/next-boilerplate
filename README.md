@@ -11,6 +11,7 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- https://github.com/thlorenz/doctoc -->
 
+- [Modules](#modules)
 - [Conventions](#conventions)
   - [Feature-based modules](#feature-based-modules)
     - [Actions and Reducers](#actions-and-reducers)
