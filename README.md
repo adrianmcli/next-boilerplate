@@ -3,7 +3,7 @@ A modern universal boilerplate for React applications using Next.js.
 
 ### Warning
 
-This boilerplate is in heavy development. The next step will be to refactor some of the Redux logic into its own module. Please keep that in mind as you evaluate this repository and read the following paragraphs.
+This boilerplate is in heavy development. Please keep this in mind as you evaluate this repository and read the following paragraphs.
 
 ### Table of Contents
 
