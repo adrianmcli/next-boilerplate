@@ -1,3 +1,7 @@
 export default {
-  todoapp: { todos: [1, 2, 3] },
+  todoapp: {
+    todos: [
+      { id: 0, title: "Buy milk", completed: false }
+    ]
+  },
 }

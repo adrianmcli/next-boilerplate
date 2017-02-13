@@ -1,12 +1,11 @@
-export default ({ todos = [] }) => {
+import Input from '../containers/Input'
+import TodoList from './TodoList'
+
+export default ({ todos = [], addTodo }) => {
   return (
     <div>
-      <input type="text"/>
-      <div>
-        {
-          todos.map((todo, i) => <div key={i}>item</div>)
-        }
-      </div>
+      <Input />
+      <TodoList todos={todos} />
     </div>
   )
 }

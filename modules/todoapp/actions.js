@@ -1,7 +1,7 @@
 // constants
-export const INCREMENT = 'todoapp/INCREMENT';
-export const DECREMENT = 'todoapp/DECREMENT';
+export const ADD_TODO = 'todoapp/ADD_TODO';
+export const REMOVE_TODO = 'todoapp/REMOVE_TODO';
 
 // action creators
-export const increment = () => ({ type: INCREMENT })
-export const decrement = () => ({ type: DECREMENT })
+export const addTodo = (text) => ({ type: ADD_TODO, text })
+export const removeTodo = (id) => ({ type: REMOVE_TODO, id })
