@@ -715,6 +715,13 @@ babel-register@^6.22.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
+babel-root-import@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/babel-root-import/-/babel-root-import-3.2.2.tgz#43f305790def47192c6d1061d631a94e74fa7389"
+  dependencies:
+    babel "^6.1.18"
+    slash "^1.0.0"
+
 babel-runtime@6.22.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.22.0.tgz#1cf8b4ac67c77a4ddb0db2ae1f74de52ac4ca611"
@@ -754,6 +761,10 @@ babel-types@^6.15.0, babel-types@^6.19.0, babel-types@^6.22.0:
     esutils "^2.0.2"
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
+
+babel@^6.1.18:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/babel/-/babel-6.5.2.tgz#59140607438270920047ff56f02b2d8630c2d129"
 
 babylon@^6.11.0, babylon@^6.13.0, babylon@^6.14.1, babylon@^6.15.0:
   version "6.15.0"
@@ -1376,7 +1387,15 @@ eslint-config-airbnb@^14.1.0:
   dependencies:
     eslint-config-airbnb-base "^11.1.0"
 
-eslint-import-resolver-node@^0.2.0:
+eslint-import-resolver-babel-root-import@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-babel-root-import/-/eslint-import-resolver-babel-root-import-0.0.2.tgz#65a524c5a29da3c31452b3320b4611aa7b562f8b"
+  dependencies:
+    babel-root-import "^3.2.2"
+    eslint-import-resolver-node "^0.2.1"
+    json5 "^0.5.0"
+
+eslint-import-resolver-node@^0.2.0, eslint-import-resolver-node@^0.2.1:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.2.3.tgz#5add8106e8c928db2cba232bcd9efa846e3da16c"
   dependencies:
