@@ -1,5 +1,5 @@
-import Container from './containers/Counter'
+import Container from './containers/Todoapp'
 import CounterReducer from './reducer'
 
-export const Counter = Container
+export const Todoapp = Container
 export const reducer = CounterReducer
