@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { Provider } from 'react-redux'
 import { Counter } from '~/counter'
-import { reducers, initStore } from '~/redux'
+import { reducers, initStore, initialState } from '~/redux'
 
-let store = initStore(reducers)
+let store = initStore(reducers, initialState)
 
 export default () =>
   <Provider store={store}>

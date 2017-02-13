@@ -18,3 +18,8 @@ export const initStore = (reducer, initialState = {}, isServer) => {
   }
   return store
 }
+
+export const initialState = {
+  counter: { count: 3 },
+  todoapp: { count: -3 },
+}
