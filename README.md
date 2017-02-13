@@ -5,11 +5,28 @@ A modern universal boilerplate for React applications using Next.js.
 
 This boilerplate is in heavy development. The next step will be to refactor some of the Redux logic into its own module. Please keep that in mind as you evaluate this repository and read the following paragraphs.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Conventions](#conventions)
+  - [Feature-based folder structure](#feature-based-folder-structure)
+    - [Actions and Reducers](#actions-and-reducers)
+    - [Importing conventions](#importing-conventions)
+    - [Exporting conventions](#exporting-conventions)
+  - [Container-Component folder structure](#container-component-folder-structure)
+    - [Number of files](#number-of-files)
+    - [Example](#example)
+      - [`containers/Counter.js`](#containerscounterjs)
+      - [`components/Counter.js`](#componentscounterjs)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Conventions
 
 As per Next.js convention, everything starts at the `pages` directory. Beyond this (and other default conventions), we have decided to add some additional conventions to improve the developer experience.
 
-## Feature-based folder structure 📁
+## Feature-based folder structure
 
 A module is just a folder underneath the `modules` directory.
 
@@ -59,7 +76,7 @@ Inside each module, the `index.js` file will have **named exports** for anything
 
 For all other files inside the module, they should all have **default exports** so that each file's responsibility is made clear by what it is exporting.
 
-## Container-Component folder structure 📐
+## Container-Component folder structure
 
 Inside each React-based module, there should be two folders: `components` and `containers`.
 
@@ -85,7 +102,7 @@ modules/counter-components/
 
 ### Example
 
-#### `containers/Counter.js`:
+#### `containers/Counter.js`
 
 ```js
 import { connect } from 'react-redux'
@@ -99,7 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(state => state, mapDispatchToProps)(Component)
 ```
 
-#### `components/Counter.js`:
+#### `components/Counter.js`
 
 ```js
 export default ({ count = 0, increment, decrement }) =>
