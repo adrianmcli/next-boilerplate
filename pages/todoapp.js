@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { Counter, reducer } from '~/todoapp'
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { Counter } from '~/todoapp'
+import { reducers, initStore } from '~/redux'
 
-let store = createStore(reducer, composeWithDevTools())
+let store = initStore(reducers)
 
 export default () =>
   <Provider store={store}>
@@ -12,5 +11,6 @@ export default () =>
       <h1>Todo App</h1>
       <Counter />
       <Link href="/">Home</Link>
+      <Link href="/counter">Counter</Link>
     </div>
   </Provider>
