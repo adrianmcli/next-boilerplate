@@ -1,7 +1,7 @@
 {
   "name": "next-boilerplate",
   "version": "0.1.0",
-  "description": "A boilerplate for Next.js applications.",
+  "description": "A modern universal boilerplate for React applications using Next.js.",
   "main": "pages/index.js",
   "repository": {},
   "author": "Adrian Li",
