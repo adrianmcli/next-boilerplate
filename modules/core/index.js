@@ -1,1 +1,1 @@
-export const hello = "Hello from the core module!"
+export const hello = 'Hello from the core module!'

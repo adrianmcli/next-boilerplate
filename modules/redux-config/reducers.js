@@ -4,5 +4,5 @@ import { reducer as todoapp } from '~/todoapp'
 
 export default combineReducers({
   counter,
-  todoapp
+  todoapp,
 })

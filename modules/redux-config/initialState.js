@@ -5,5 +5,5 @@ import { initialState as todoapp } from '~/todoapp'
 // merge all initial states and export
 export default Object.assign({},
   counter,
-  todoapp
+  todoapp,
 )

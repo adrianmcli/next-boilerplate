@@ -1,5 +1,5 @@
 export default class Component extends React.Component {
-  state = { inputText: "" }
+  state = { inputText: '' }
 
   onChange = (e) => {
     this.setState({ inputText: e.target.value })
@@ -9,7 +9,7 @@ export default class Component extends React.Component {
     if (e.keyCode === 13) {
       const { addTodo } = this.props
       addTodo(this.state.inputText)
-      this.setState({ inputText: "" })
+      this.setState({ inputText: '' })
     }
   }
 
