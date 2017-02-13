@@ -1,7 +1,9 @@
+import * as todoappActions from './actions'
+import todoappReducer from './reducer'
 import Container from './containers/Todoapp'
-import CounterReducer from './reducer'
 import state from './initialState'
 
+export const actions = todoappActions
+export const reducer = todoappReducer
 export const Todoapp = Container
-export const reducer = CounterReducer
 export const initialState = state

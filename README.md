@@ -76,7 +76,7 @@ You should never be using relative imports unless you are only working with the 
 
 Inside each module, the `index.js` file will have **named exports** for anything that the module chooses to expose to the rest of the app.
 
-For all other files inside the module, they should all have **default exports** so that each file's responsibility is made clear by what it is exporting.
+For all other files inside the module, they should all be **default exports** so that each file's responsibility is made clear by what it is exporting. Note that this is not a hard rule, as Redux actions can be considered an exception to this rule. The reasoning for this exception is due to the fact that actions usually are not large enough to warrant their own file. As a result, we group them all into one `actions.js` file and use named exports to expose them.
 
 ## Container-Component model
 
