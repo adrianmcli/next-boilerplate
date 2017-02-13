@@ -6,4 +6,4 @@ const mapDispatchToProps = (dispatch) => ({
   decrement: () => dispatch({ type: 'DECREMENT' }),
 })
 
-export default connect(state => state, mapDispatchToProps)(Component)
+export default connect(state => state.counter, mapDispatchToProps)(Component)

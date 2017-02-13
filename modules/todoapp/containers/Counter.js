@@ -6,4 +6,4 @@ const mapDispatchToProps = (dispatch) => ({
   decrement: () => dispatch({ type: 'TODOAPP_DECREMENT' }),
 })
 
-export default connect(state => state, mapDispatchToProps)(Component)
+export default connect(state => state.todoapp, mapDispatchToProps)(Component)
