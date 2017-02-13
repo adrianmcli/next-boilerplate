@@ -50,9 +50,11 @@ You should only import from `index.js` and not any of the module's internal file
 
 ### Actions and Reducers
 
-All Redux-related items such as actions and reducers should reside in their own feature-based modules. This also includes more advanced objects/functions/files like Sagas ([Redux-Saga](https://github.com/redux-saga/redux-saga)) and Epics ([Redux-Observable](https://github.com/redux-observable/redux-observable)).
+Redux actions and reducers should reside in their own feature-based modules. This also includes more advanced objects/functions/files like Sagas ([Redux-Saga](https://github.com/redux-saga/redux-saga)) and Epics ([Redux-Observable](https://github.com/redux-observable/redux-observable)).
 
 The idea is to ensure that **each module fully contains everything required for the implementation of its feature**. That way, when you need to go change something, you'll know that everything you need will be inside that module.
+
+The `redux-config` module is then configured to pull in the necessary reducers and initial state from each feature module.
 
 ### Importing
 
