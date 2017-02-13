@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import { Provider } from 'react-redux'
 import { Counter } from '~/counter'
-import { reducers, initStore, initialState } from '~/redux'
-
-let store = initStore(reducers, initialState)
+import { getStore } from '~/redux-config'
 
 export default () =>
-  <Provider store={store}>
+  <Provider store={getStore()}>
     <div>
       <h1>Hello Counter!</h1>
       <Counter />
