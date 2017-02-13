@@ -1,6 +1,10 @@
 # next-boilerplate
 A modern universal boilerplate for React applications using Next.js.
 
+### Warning
+
+This boilerplate is still in heavy development. The next step will probably be to refactor some of the Redux logic into its own module. Please keep that in mind as you evaluate this repository and the following paragraphs.
+
 # Some conventions
 
 As per Next.js convention, everything starts at the `pages` directory. Beyond this (and other default conventions), we have decided to institute some conventions to improve the developer experience.
