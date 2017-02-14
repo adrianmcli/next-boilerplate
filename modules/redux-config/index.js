@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import reducers from './reducers'
 import initialState from './initialState'
 import initStore from './store'
