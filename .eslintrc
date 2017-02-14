@@ -1,11 +1,23 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "cleanjs"],
   "rules": {
     "semi": ["error", "never"],
     "react/react-in-jsx-scope": 0,
     "react/jsx-filename-extension": 0,
-    "react/prop-types": 1
+
+    # not needed if we have flow static typing
+    "react/prop-types": 0,
+
+    # difficult to maintain readability
+    "fp/no-unused-expression": 0,
+
+    # more convenient for traditional class components (when needed)
+    "fp/no-this": 0,
+    "fp/no-class": 0,
+
+    # aspirational, but not practical
+    "better/no-ifs": 1,
   },
   "settings": {
     "import/resolver": {
