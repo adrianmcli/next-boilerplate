@@ -1,2 +1,7 @@
-// eslint-disable-next-line import/prefer-default-export
-export const test = 'this is a test message from the async-data module'
+import asyncDataReducer from './reducer'
+import Container from './containers/AsyncExample'
+import pingEpic from './epic'
+
+export const reducer = asyncDataReducer
+export const AsyncExample = Container
+export const epic = pingEpic
