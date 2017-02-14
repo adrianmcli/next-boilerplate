@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-nil */
 import { INCREMENT, DECREMENT } from './actions'
 
 export default (state = { count: 0 }, action) => {

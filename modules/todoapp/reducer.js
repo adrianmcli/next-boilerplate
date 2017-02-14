@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-nil */
 import { ADD_TODO, REMOVE_TODO } from './actions'
 
 export default (state = { todos: [] }, action) => {
