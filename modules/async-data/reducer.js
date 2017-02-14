@@ -1,10 +1,10 @@
 /* eslint-disable fp/no-nil */
-// import { INCREMENT, DECREMENT } from './actions'
+import { START_REQUEST, RESPONSE_RECEIVED } from './actions'
 
-export default (state = { loading: true }, action) => {
+export default (state = { loading: false }, action) => {
   switch (action.type) {
-    // case INCREMENT: return { count: state.count + 1 }
-    // case DECREMENT: return { count: state.count - 1 }
+    case START_REQUEST: return { loading: true }
+    case RESPONSE_RECEIVED: return { loading: false }
     default: return state
   }
 }

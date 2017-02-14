@@ -1,5 +1,5 @@
-export default ({ ping }) =>
+export default ({ startRequest, loading }) =>
   <div>
-    <button onClick={ping}>Fetch Data</button>
-    <div>Loading...</div>
+    <button onClick={startRequest}>Fetch Data</button>
+    { loading ? <div>Loading...</div> : <div>Press the button</div>}
   </div>
