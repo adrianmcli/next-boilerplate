@@ -12,5 +12,5 @@ export default (reducer, initialState = {}) => {
   if (!store) {
     store = createStore(reducer, initialState, enhancers)
   }
-  return store || createStore(reducer, initialState, enhancers)
+  return store
 }
