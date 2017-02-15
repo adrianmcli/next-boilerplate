@@ -1,5 +1,12 @@
-# next-boilerplate
-A modern universal boilerplate for React applications using Next.js.
+# Next Boilerplate
+A modern universal boilerplate for React applications using [Next.js](https://github.com/zeit/next.js).
+
+# Features 🎉
+
+* Isolated package-based development
+* Redux + Redux-Observable for state management
+* Server-side rendering (comes out of the box from Next.js)
+* Linting with [AirBnB](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and [CleanJS](https://github.com/bodil/eslint-config-cleanjs)
 
 ### Warning
 
