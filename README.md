@@ -1,7 +1,7 @@
 # Next Boilerplate 📐
 A modern universal boilerplate for React applications using [Next.js](https://github.com/zeit/next.js).
 
-# Features 🎉
+### Features 🎉
 
 * Isolated package-based development
 * Redux + Redux-Observable for state management
