@@ -9,6 +9,5 @@ export default () =>
       <h1>Hello Counter!</h1>
       <Counter />
       <Link href="/"><a>Home</a></Link>
-      <Link href="/todoapp"><a>Todoapp</a></Link>
     </div>
   </Provider>
