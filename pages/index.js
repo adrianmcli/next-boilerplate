@@ -7,5 +7,5 @@ export default () =>
     <p>{ hello }</p>
     <Link href="/counter"><a>Counter</a></Link>
     <Link href="/todoapp"><a>Todoapp</a></Link>
-    <Link href="/async-data"><a>Async</a></Link>
+    <Link href="/fetch"><a>Fetch</a></Link>
   </div>

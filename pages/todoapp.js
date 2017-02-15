@@ -9,6 +9,5 @@ export default () =>
       <h1>Todo App</h1>
       <Todoapp />
       <Link href="/"><a>Home</a></Link>
-      <Link href="/counter"><a>Counter</a></Link>
     </div>
   </Provider>

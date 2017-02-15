@@ -1,6 +1,6 @@
 import { combineEpics } from 'redux-observable'
-import { epic as pingEpic } from '~/async-data'
+import { epic as fetchEpic } from '~/fetch'
 
 export default combineEpics(
-  pingEpic,
+  fetchEpic,
 )
