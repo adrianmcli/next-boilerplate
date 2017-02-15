@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-nil, fp/no-let, fp/no-mutation, better/no-ifs */
 import { createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 

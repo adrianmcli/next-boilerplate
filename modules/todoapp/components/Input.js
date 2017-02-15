@@ -1,11 +1,11 @@
 /* global React */
+/* eslint-disable fp/no-nil, better/explicit-return, better/no-ifs */
 
 export default class Component extends React.Component {
   state = { inputText: '' }
 
-  onChange = (e) => {
+  onChange = e =>
     this.setState({ inputText: e.target.value })
-  }
 
   onKeyDown = (e) => {
     if (e.keyCode === 13) {
