@@ -22,6 +22,9 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
     - [Example](#example)
       - [`containers/Counter.js`](#containerscounterjs)
       - [`components/Counter.js`](#componentscounterjs)
+  - [Asynchronicity with Observables](#asynchronicity-with-observables)
+    - [Example](#example-1)
+    - [Redux Thunks](#redux-thunks)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -33,6 +36,7 @@ There are currently four modules in this boilerplate example:
 * `redux-config` — Configures Redux; It is also where all the reducers and initial app states are combined.
 * `counter` — Implements a Redux-based increment/decrement counter with its own actions, reducers, and initial state.
 * `todoapp` — Implements a simple Redux-based todo app similar to the `counter` module, but with more complex containers and components.
+* `fetch` — Implements an asynchronous fetching example. It fetches from an API endpoint and displays the resulting data.
 
 # Conventions
 
@@ -140,3 +144,36 @@ export default ({ count = 0, increment, decrement }) =>
     <button onClick={ decrement }>Decrement</button>
   </div>
 ```
+
+## Asynchronicity with Observables
+
+[Redux-Observable](https://github.com/redux-observable/redux-observable/) is used along with [RxJS](http://reactivex.io/rxjs/) for handling asynchronicity in the app. This means that asynchronous activity is handled as streams inside files called "epics". Please note that epics are run *after* actions have been handled by the reducers.
+
+Each module that requires asynchronous support will require an epic file. These epic files are then combined inside the `redux-config` module, much like the case for redux reducers.
+
+The `fetch` page and module is a good demonstration of this architecture.
+
+### Example
+
+Here is an example `epic.js`, referenced from the `fetch` module:
+
+```js
+import { START_REQUEST, responseReceived } from './actions'
+
+const request$ = Observable
+  .ajax({ url: 'https://jsonplaceholder.typicode.com/posts/1' })
+  .map(data => data.response)
+
+export default action$ =>
+  action$.filter(action => action.type === START_REQUEST)
+    .exhaustMap(() => request$)
+    .map(responseReceived)
+```
+
+All actions come through the `action$` stream after they have already passed through the redux reducer. We begin by filtering for the action we are specifically concerned with. Once we detect that action, we fire off our AJAX request via a nested observable called `request$`.
+
+`request$` is then merged back onto the main stream by `exhaustMap`, and its response is sent through to the `responseReceived` function. Note that you can also use `mergeMap` or `switchMap` depending on your desired behaviour.
+
+### Redux Thunks
+
+Redux-Observable may be overkill for certain simple use-cases. As a result, you may choose to use [Redux-Thunk](https://github.com/gaearon/redux-thunk), but do try to isolate your asynchronous code in a specific file for ease of reasoning.
