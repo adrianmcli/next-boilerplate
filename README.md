@@ -29,8 +29,10 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
     - [Example](#example)
       - [`containers/Counter.js`](#containerscounterjs)
       - [`components/Counter.js`](#componentscounterjs)
-  - [Asynchronicity with Observables](#asynchronicity-with-observables)
+  - [Namespaced Modules](#namespaced-modules)
     - [Example](#example-1)
+- [Asynchronicity with Observables](#asynchronicity-with-observables)
+    - [Example](#example-2)
     - [Redux Thunks](#redux-thunks)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -152,7 +154,26 @@ export default ({ count = 0, increment, decrement }) =>
   </div>
 ```
 
-## Asynchronicity with Observables
+## Namespaced Modules
+
+When your app grows larger and more complex, you might end up having a long list of modules. This is not ideal, and it's probably a good time to refactor some of these modules into their own namespaced modules.
+
+Taking inspiration from NPM, the convention we have decided to use is the `@` symbol. In short, this is basically nested modules, but with only one level of depth allowed and it must be explicitly stated by using the `@` symbol.
+
+For an example of this, please see the `my-feature` page.
+
+### Example
+
+Inside your `modules` folder, create a namespace by creating a directory named `@my-feature`, where `my-feature` is the name of your namespace. Inside this directory, you can place your namespaced modules. Importing from these modules should look something like this:
+
+```js
+import { hello } from '~/@my-feature/core'
+import { add } from '~/@my-feature/utils'
+```
+
+Note that there is nothing different or special about these modules, they simply sit within another folder.
+
+# Asynchronicity with Observables
 
 [Redux-Observable](https://github.com/redux-observable/redux-observable/) is used along with [RxJS](http://reactivex.io/rxjs/) for handling asynchronicity in the app. This means that asynchronous activity is handled as streams inside files called "epics". Please note that epics are run *after* actions have been handled by the reducers.
 
