@@ -172,7 +172,7 @@ export default action$ =>
 
 All actions come through the `action$` stream after they have already passed through the redux reducer. We begin by filtering for the action we are specifically concerned with. Once we detect that action, we fire off our AJAX request via a nested observable called `request$`.
 
-`request$` is then merged back onto the main stream by `exhaustMap`, and its response is sent through to the `responseReceived` function. Note that you can also use `mergeMap` or `switchMap` depending on your desired behaviour.
+`request$` is then merged back onto the main stream by `exhaustMap`, and its response is sent through to the `responseReceived` function, thereby dispatching a `RESPONSE_RECEIVED` action with the data payload. Note that you can also use `mergeMap` or `switchMap` depending on your desired behaviour.
 
 ### Redux Thunks
 
