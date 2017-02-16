@@ -47,7 +47,7 @@ There are currently four modules in this boilerplate example:
 * `todoapp` — Implements a simple Redux-based todo app similar to the `counter` module, but with more complex containers and components.
 * `fetch` — Implements an asynchronous fetching example. It fetches from an API endpoint and displays the resulting data.
 
-# Conventions
+# Convent📦ions
 
 As per Next.js convention, everything starts at the `pages` directory. Beyond this (and other default conventions), we have decided to add some additional conventions to improve the developer experience.
 
