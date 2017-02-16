@@ -18,7 +18,7 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- https://github.com/thlorenz/doctoc -->
 
-- [Modules](#modules)
+- [Modules](#modules-)
 - [Conventions](#conventions)
   - [Feature-based modules](#feature-based-modules)
     - [Actions and Reducers](#actions-and-reducers)
@@ -37,7 +37,7 @@ This boilerplate is in heavy development. Please keep this in mind as you evalua
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Modules
+# Modules 📦
 
 There are currently four modules in this boilerplate example:
 
