@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "max-len": 1,
+    "quotes": ["error", "backtick"],
+    "no-return-assign": "error",
+    "jsx-a11y/anchor-is-valid": 1
+  },
+  "globals": {
+    "React": true
+  }
+}

@@ -1,1 +1,1 @@
-export default () => <div>Hello from Next.js</div>
+export default () => <div>Hello from Next.js</div>;
